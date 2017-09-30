@@ -1,0 +1,818 @@
+<!--
+Author: W3layouts
+Author URL: https://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: https://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/jquery.toast.css">
+ <script type="text/javascript" src="js/jquery.toast.js"></script>
+
+
+<script src="https://raw.githubusercontent.com/matmancini/html5form/master/dist/html5form.min.js"></script>
+<meta name="description" content="Laguna verde, terrenos por 85.000 mensual. Adicionalmente, venta departamento dpto. en Providencia ubicado en Eliodoro Yañez con Lyon " />
+	<meta name="description" content="Laguna Verde Chile. Playa Laguna Verde" />
+<meta name="keywords" content="mapa playa laguna verde,ubicación playa laguna verde,playa laguna verde, playa laguna verde" />
+<meta http-equiv="content-language" content="es" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<meta property="fb:app_id" content="405141062947630" />
+<meta property="og:title" content="Mapa de Playa Laguna Verde" />
+<meta property="og:type" content="landmark" />
+<meta property="og:url" content="https://hsierrapropiedades.com/Inicio/pagina_venta.php?id=Laguna%20Verde" />
+<meta property="og:site_name" content="https://hsierrapropiedades.com/Inicio/pagina_venta.php?id=Laguna%20Verde" />
+<meta property="og:description" content="Información y mapa de Playa Laguna Verde Chile. Playa Laguna Verde" />
+<meta name="DC.title" content="Playa Laguna Verde" />
+<head>
+<?php include("head.php"); ?>
+</head>
+<link rel="manifest" href="manifest.json">
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+<script type="text/javascript">
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+    function(m,key,value) {
+      vars[key] = value;
+    });
+    return vars;
+  }
+
+  var fType = getUrlVars()["hola"];
+  console.log("jajajajjaja"+fType);
+
+if(fType=="a"){
+	$.toast({
+    heading: 'Correo Enviado',
+    text: 'Se le contactará a la brevedad. Recuerde si necesita urgente contactarnos llame al 957485983!',
+    icon: 'info',
+    loader: true,        // Change it to false to disable loader
+    hideAfter: 5000, 
+    loaderBg: '#9EC600'  // To change the background
+})
+}
+
+
+</script>
+
+
+<script>
+
+
+/*
+ function makePopup(url, width, height, overflow)
+{
+if (width > 640) { width = 640; }
+if (height > 480) { height = 480; }
+if (overflow == '' || !/^(scroll|resize|both)$/.test(overflow))
+{
+overflow = 'both';
+}
+var win = window.open(url, '',
+'width=' + width + ',height=' + height
++ ',scrollbars=' + (/^(scroll|both)$/.test(overflow) ?
+'yes' : 'no')
++ ',resizable=' + (/^(resize|both)$/.test(overflow) ?
+'yes' : 'no')
++ ',status=yes,toolbar=no,menubar=no,location=no'
+);
+return win;
+}
+var win = window.open('popup.php', 'winName',
+'width=840,height=480,'
++ 'scrollbars=yes,resizable=yes,status=yes,'
++ 'toolbar=no,menubar=no,location=no');
+*/
+</script>
+<script src="jquery.validate.js"></script>	
+<script src="chat_muchos_usuarios/aviso.js">
+
+	
+</script>
+<script>
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+  .then(function(reg) {
+    // registration worked
+    console.log('Registration succeeded. Scope is ' + reg.scope);
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+}
+</script>
+  
+	<!-- navigation -->
+<?php include("navigator.php"); ?>
+<!-- /navigation -->
+<!-- banner section -->
+
+
+<div class="pogoSlider" id="js-main-slider">
+	<div class="pogoSlider-slide" data-transition="verticalSlide" data-duration="1000"  style="background-image:url(images/uno.jpg);">
+		<div class="pogoSlider-slide-element">
+			<h3>Cercanía y hermoso paisaje: Terrenos en Laguna Verde.</h3>
+			<a href="about.php" class="link1">Leer mas</a>
+		</div>
+	</div>
+	<div class="pogoSlider-slide " data-transition="blocksReveal" data-duration="1000"  style="background-image:url(images/dos.jpg);">
+		<div class="pogoSlider-slide-element">
+			<h3>Excelente oportunidad por $90.000 mensuales</h3>
+			<a href="about.php" class="link1">Leer mas</a>
+		</div>
+	</div>
+	<div class="pogoSlider-slide " data-transition="barRevealDown" data-duration="1000"  style="background-image:url(images/tres.jpg);">
+		<div class="pogoSlider-slide-element">
+			<h3>Aprovecha y obtén tu bien raíz!</h3>
+			<a href="about.php" class="link1">Leer mas</a>
+		</div>
+	</div>
+	
+
+	 
+	
+</div>
+<!-- /banner section -->
+<!-- welcome section -->
+<section class="welcome">
+
+	<div class="container">	
+		<div class="wel-w3ls">
+			<div style="text-align:center">
+			<h3 id="centrar" class="text-center w3layouts w3 w3l w3ls">Bienvenido </h3>
+			<p class="text-center w3layouts w3 w3l w3ls">Esta es una organización que se dedica al corretaje de propiedades. Buscamos llevar bienes de gran valor, como lo son terrenos cerca del litoral a todas las personas que lo deseen, sin ver Dicom u otros factores.</p>
+		</div>
+		</div>
+	</div>	
+</section>
+<!-- /welcome section -->
+<!-- info section -->
+<section class="info">
+	<div class="container">
+
+
+
+
+
+
+		<div class="row">
+			<div class="col-lg-5 col-md-5 info-w3ls1">
+				<iframe id="video"src="https://player.vimeo.com/video/55526593?title=0&byline=0&portrait=0"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+					
+				</a>
+			</div>
+			<div class="col-lg-7 col-md-7 info-w3ls2">
+				<div class="info-agile">
+					<h2>Un pequeño recorrido por Laguna Verde</h2>
+					<p>Laguna Verde es un pequeño poblado a 15 Km al Sur de Valparaíso y 135 km de Santiago. Las atracciones incluyen playas aisladas y kilómetros de viejas carreteras madereras perfectas para el ciclismo de montaña.
+
+Allí la gente puede encontrar lugares muy interesantes como: "Las Canteras", que es una secuencia de diferentes caídas de agua y piscinas naturales, "La Playa Chica" que es como una pequeña playa cercana a la central eléctrica que opera con carbón, "La Caleta Chica "y" La Caleta Grande "que son pequeños lugares donde viven y trabajan las familias de pescadores," Las Docas "que es una playa con grandes olas y es un lugar muy bueno para la pesca y" El Faro "que se encuentra al final de El golfo y tiene el Faro que guía a los barcos al llegar a Valparaíso.</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+</section>
+ <!--info section -->
+<!-- team section 
+<section class="team">
+	<div class="container">
+		<h3 class="text-center agileits agileinfo wthree w3-agileits">Our Amazing Team</h3>
+		<p class="text-center agileits agileinfo wthree w3-agileits">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 team-w3ls">
+				<div class="grid">
+					<figure class="effect-julia">
+						<img src="images/team-img1.jpg" alt="w3layouts" class="img-responsive" title="w3layouts"/>
+						<figcaption>
+							<div>
+								<ul class="social-icons2">	
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								</ul>	
+							</div>
+						</figcaption>			
+					</figure>
+				</div>
+				<h4 class="text-center">Elizabeth</h4>
+				<p class="team-p1">Founder</p>	
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 team-w3ls">
+				<div class="grid">
+					<figure class="effect-julia">
+						<img src="images/team-img2.jpg" alt="w3layouts" class="img-responsive" title="w3layouts"/>
+						<figcaption>
+							<div>
+								<ul class="social-icons2">	
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								</ul>	
+							</div>
+						</figcaption>			
+					</figure>
+				</div>
+				<h4 class="text-center">Diana</h4>
+				<p class="team-p1">President</p>	
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 team-w3ls">
+				<div class="grid">
+					<figure class="effect-julia">
+						<img src="images/team-img3.jpg" alt="w3layouts" class="img-responsive" title="w3layouts"/>
+						<figcaption>
+							<div>
+								<ul class="social-icons2">	
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								</ul>	
+							</div>
+						</figcaption>			
+					</figure>
+				</div>
+				<h4 class="text-center">Max Payne</h4>
+				<p class="team-p1">Secretary</p>	
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 team-w3ls">
+				<div class="grid">
+					<figure class="effect-julia">
+						<img src="images/team-img4.jpg" alt="w3layouts" class="img-responsive" title="w3layouts"/>
+						<figcaption>
+							<div>
+								<ul class="social-icons2">	
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								</ul>	
+							</div>
+						</figcaption>			
+					</figure>
+				</div>
+				<h4 class="text-center">Johnny Blaze</h4>
+				<p class="team-p1">Manager</p>				
+			</div>
+		</div>	
+	</div>
+</section>
+ /team section -->
+<!-- pricing section -->
+<section class="price">
+	<div class="container">
+		<h3 class="text-center agileits-w3layouts agile w3-agile">Nuestros Precios</h3>
+		<p class="text-center agileits-w3layouts agile w3-agile">Si deseas mayor información, contáctanos</p>
+		<div class="cd-pricing-container cd-has-margins">
+			<div class="cd-pricing-switcher">
+				<p class="fieldset">
+					<input type="radio" name="duration-2" value="monthly" id="monthly-2" checked>
+					<label for="monthly-2">Laguna Verde</label>
+					<input type="radio" name="duration-2" value="yearly" id="yearly-2">
+					<label for="yearly-2">Otros</label>
+					<span class="cd-switch"></span>
+				</p>
+			</div> <!-- .cd-pricing-switcher -->
+			<ul class="cd-pricing-list cd-bounce-invert">
+				<li class="col-lg-4 col-md-4 col-sm-12">
+					<div class="price-w3ls">
+						<ul class="cd-pricing-wrapper">
+							<li data-type="monthly" class="is-visible">
+								<header class="cd-pricing-header">
+									<h3>Laguna Verde</h3>
+									<ul class="stars">
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+									</ul>
+									<div class="cd-price">
+										<span class="cd-currency">$</span>
+										<span class="cd-value">85.000</span>
+									</div>
+									<p class="dur">48 <span>Cuotas</span></p>
+								</header> <!-- .cd-pricing-header -->
+
+								<div class="cd-pricing-body">
+									<ul class="cd-pricing-features">
+										<li><em>500</em> Metros cuadrados</li>
+										<li><em>5</em> Minutos de la playa</li>
+										<li><em></em> Terrenos Agrícolas</li>
+										<li><em></em> Cuotas Fijas</li>
+										<li><em></em> Sin trámites</li>
+										<li><em>1</em> Financiamiento Directo</li>
+									</ul>
+								</div> <!-- .cd-pricing-body -->
+								<footer class="cd-pricing-footer">
+									<a class="cd-select popup-with-zoom-anim" href="#small-dialog">Consulta</a>
+								</footer>  <!-- .cd-pricing-footer -->
+							</li>
+							<li data-type="yearly" class="is-hidden">
+								<header class="cd-pricing-header">
+									<h3>Punta Choros</h3>
+									<ul class="stars">
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+									</ul>
+									<div class="cd-price">
+										<span class="cd-currency">$</span>
+										<span class="cd-value">117.000</span>
+									</div>
+									<p class="dur">48 <span>Cuotas</span></p>
+								</header> <!-- .cd-pricing-header -->
+								<div class="cd-pricing-body">
+									<ul class="cd-pricing-features">
+										<li><em>700</em> Metros cuadrados</li>
+										<li><em>Oferta Contado:</em> 2.790.000</li>
+										<li><em></em> Vende directamente dueño, sin pie ni aval</li>
+										<li><em></em> Cuotas Fijas</li>
+										<li><em></em> Sin trámites</li>
+										<li><em></em> Financiamiento Directo</li>
+									</ul>
+								</div> <!-- .cd-pricing-body -->
+								<footer class="cd-pricing-footer">
+									<a class="cd-select popup-with-zoom-anim" href="#small-dialog">Consulta</a>
+								</footer>  <!-- .cd-pricing-footer -->
+							</li>
+						</ul> <!-- .cd-pricing-wrapper -->
+					</div>
+				</li>
+				<li class="col-lg-4 col-md-4 col-sm-12">
+					<div class="price-w3ls">
+						<ul class="cd-pricing-wrapper">
+							<li data-type="monthly" class="is-visible">
+								<header class="cd-pricing-header">
+									<h3>Laguna Verde</h3>
+									<ul class="stars">
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+									</ul>	
+									<div class="cd-price">
+										<span class="cd-currency">$</span>
+										<span class="cd-value">111.000</span>
+									</div>
+									<p class="dur">30 <span>Cuotas</span></p>
+								</header> <!-- .cd-pricing-header -->
+								<div class="cd-pricing-body">
+									<ul class="cd-pricing-features">
+										<li><em>500</em> Metros cuadrados</li>
+										<li><em>5</em> Minutos de la playa</li>
+										<li><em></em> Terrenos Agrícolas</li>
+										<li><em></em> Cuotas Fijas</li>
+										<li><em></em> Sin trámites</li>
+										<li><em>1</em> Financiamiento Directo</li>
+									</ul>
+								</div> <!-- .cd-pricing-body -->
+								<footer class="cd-pricing-footer">
+									<a class="cd-select popup-with-zoom-anim" href="#small-dialog">Consulta</a>
+								</footer>  <!-- .cd-pricing-footer -->
+							</li>
+							<li data-type="yearly" class="is-hidden">
+								<header class="cd-pricing-header">
+									<h3>Chehueque</h3>
+									<ul class="stars">
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+									</ul>
+									<div class="cd-price">
+										<span class="cd-currency">$</span>
+										<span class="cd-value">62.000</span>
+									</div>
+									<p class="dur">48 <span>Cuotas</span></p>
+								</header> <!-- .cd-pricing-header -->
+								<div class="cd-pricing-body">
+									<ul class="cd-pricing-features">
+									<li><em>1000</em> Metros cuadrados</li>
+										<li><em>Oferta Contado:</em> 1.390.000</li>
+										<li><em>III</em> Región // Vallenar</li>
+										<li><em></em> Cuotas Fijas</li>
+										<li><em></em> Sin trámites</li>
+										<li><em>1</em> Financiamiento Directo</li>
+									</ul>
+								</div> <!-- .cd-pricing-body -->
+								<footer class="cd-pricing-footer">
+									<a class="cd-select popup-with-zoom-anim" href="#small-dialog">Consulta</a>
+								</footer>  <!-- .cd-pricing-footer -->
+							</li>
+						</ul> <!-- .cd-pricing-wrapper -->
+					</div>
+				</li>
+				<li class="col-lg-4 col-md-4 col-sm-12">
+					<div class="price-w3ls">
+						<ul class="cd-pricing-wrapper">
+							<li data-type="monthly" class="is-visible">
+								<header class="cd-pricing-header">
+									<h3>Laguna Verde</h3>
+									<ul class="stars">
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+									</ul>
+									<div class="cd-price">
+										<span class="cd-currency">$</span>
+										<span class="cd-value">220.000</span>
+									</div>
+									<p class="dur">12 <span>Cuotas</span></p>
+								</header> <!-- .cd-pricing-header -->
+								<div class="cd-pricing-body">
+									<ul class="cd-pricing-features">
+									<li><em>500</em> Metros cuadrados</li>
+										<li><em>5</em> Minutos de la playa</li>
+										<li><em></em> Terrenos Agrícolas</li>
+										<li><em></em> Cuotas Fijas</li>
+										<li><em></em> Sin trámites</li>
+										<li><em>1</em> Financiamiento Directo</li>
+									</ul>
+								</div> <!-- .cd-pricing-body -->
+								<footer class="cd-pricing-footer">
+									<a class="cd-select popup-with-zoom-anim" href="#small-dialog">Consulta</a>
+								</footer>  <!-- .cd-pricing-footer -->
+							</li>
+							<li data-type="yearly" class="is-hidden">
+								<header class="cd-pricing-header">
+									<h3>Litueche</h3>
+									<ul class="stars">
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+									</ul>
+									<div class="cd-price">
+										<span class="cd-currency">Próximamente</span>
+										<span class="cd-value"></span>
+									</div>
+									<p class="dur">Consulte <span>Por su terreno</span></p>
+								</header> <!-- .cd-pricing-header -->
+								<div class="cd-pricing-body">
+									<ul class="cd-pricing-features">
+									<li><em></em> 135 KM de Santiago</li>
+										<li><em>Cerca de </em> Pichilemu</li>
+										<li><em></em> Terrenos Agrícolas</li>
+										<li><em></em> Cuotas Fijas</li>
+										<li><em></em> Sin trámites</li>
+										<li><em>1</em> Financiamiento Directo</li>
+									</ul>
+								</div> <!-- .cd-pricing-body -->
+								<footer class="cd-pricing-footer">
+									<a class="cd-select popup-with-zoom-anim" href="#small-dialog">Consulta</a>
+								</footer>  <!-- .cd-pricing-footer -->
+							</li>
+						</ul> <!-- .cd-pricing-wrapper -->
+					</div>
+				</li>
+			</ul> <!-- .cd-pricing-list -->
+		</div> <!-- .cd-pricing-container -->
+	</div>
+	<!--pop-up-grid -->
+
+
+
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+<!--aca se agrega formulario -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div id="popup">
+				<div id="small-dialog" class="mfp-hide">
+					<div class="pop_up">
+						<div class="payment-online-form-left">
+							<form action="enviarcorreo.php" method="get" id="registration-form">
+								<h4><span class="shipping"> </span>Reserva Tu Terreno</h4>
+
+
+
+
+
+
+
+								<ul>
+<li><input style="width:97%; height:40px" colspan="2" data-validation="length" data-validation-length="2-30" 
+		 data-validation-error-msg="Escribe tu nombre por favor"  class="text-box-dark" type="text" name="name" Value="Nombre" onfocus="this.value = '';"></li>
+								
+								</ul>
+								<ul>
+									<li><input style="width:97%; height:40px" colspan="2"  data-validation="email"  data-validation-error-msg="Escribe una dirección adecuada" class="text-box-dark" type="text" name="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"></li>
+									
+								</ul>
+								<ul>
+									<li><input data-validation-length="3-10" data-validation="number"
+		 data-validation-error-msg="Escribe un número de contacto" style="width:97%; height:40px" colspan="2" class="text-box-dark" type="text" name="phone" value="Número" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Número';}"></li>
+								</ul>
+								<ul>
+									
+									<li><input style="width:97%; height:100px" colspan="2" class="text-box-dark" type="text" name="comentarios" value="Comentarios" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Comentarios';}"></li>
+								</ul>
+
+
+
+
+
+
+
+
+
+								<ul class="payment-sendbtns">
+									<li><input type="reset" value="Limpiar Campos" style="margin-left:-10px;"></li>
+									<li><input type="submit" value="Envíar Correo" style="margin-top:10px;" onClick="peo()"></li>
+								</ul>
+
+								<script type="text/javascript">
+function peo(e){
+	if(document.getElementByClassName('recaptcha-checkbox-border').display!='none'){ e.preventDefault(); }
+}
+
+								</script>
+								<div class="clear-fix"></div>
+	<div id="captcha" style="width:100%;height:150px;">						
+<div class="g-recaptcha" data-sitekey="6LfgRCAUAAAAAGGRbqll3VtnUvtRJBXXEBySxmIM" data-size="compact" style="width:30%; float:right"></div>
+</div>	
+
+								<div><p id="imagen"><img src="hsierra.JPG" alt=""></p></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+<script>
+ $.validate({
+    modules : 'location, date, security, file',
+    onModulesLoaded : function() {
+      $('#country').suggestCountry();
+    }
+  });
+
+  // Restrict presentation length
+  $('#presentation').restrictLength( $('#pres-max-length') );
+
+</script>
+
+
+								<style>
+#imagen{
+	position:absolute;
+	bottom:10px;
+}
+
+								</style>
+
+								<!--<h4 class="paymenthead"><span class="payment"></span>Payment Details</h4>
+								<div class="clear-fix"></div>
+								<ul class="payment-type">
+									<li><span class="col_checkbox">
+											<input id="3" class="css-checkbox1" type="checkbox">
+											<label for="3" class="css-label1"></label>
+											<a class="visa" href="#"></a>
+										</span>												
+									</li>
+									<li>
+										<span class="col_checkbox">
+											<input id="4" class="css-checkbox2" type="checkbox">
+											<label for="4" class="css-label2"></label>
+											<a class="paypal" href="#"></a>
+										</span>
+									</li>
+								</ul>
+								<ul>
+									<li><input class="text-box-dark" type="text" name="number" value="Card Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Card Number';}"></li>
+									<li><input class="text-box-dark" type="text" name="name" value="Name on card" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name on card';}"></li>
+								</ul>
+								<ul>
+									<li><input class="text-box-light hasDatepicker" name="date" type="text" id="datepicker" value="Expiration Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Expiration Date';}"><em class="pay-date"> </em></li>
+									<li><input class="text-box-dark" type="text" name="number" value="Security Code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Security Code';}"></li>
+								</ul>
+								<ul class="payment-sendbtns">
+									<li><input type="reset" value="Reset"></li>
+									<li><input type="submit" value="Submit"></li>
+								</ul>
+								<div class="clear-fix"></div>
+							</form>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		<!--pop-up-grid-->
+</section>
+<!-- /pricing section -->
+<!-- subscribe section -->
+<section class="subs">
+	<div class="container">
+		<h3>Suscribir a nuestras ofertas</h3>
+		<form action="#" method="post">
+			<div class="col-lg-10 col-md-10 col-sm-7 subs-w3ls1">
+				<div class="form-group1">
+					<input class="form-control" id="email" name="email" placeholder="Ingresa tu correo" type="email" required>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-5 subs-w3ls2">
+				<div class="form-group2">
+					<button class="btn btn-outline btn-lg" type="submit">Subscripción</button>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+		</form>	
+
+
+
+<script type="text/javascript" src="form.js"></script>
+
+
+<script>
+
+    $(document).ready(function(){
+        
+        $('#form_test').html5form({
+            allBrowsers : true,
+            responseDiv : '#response',
+            messages: 'es',
+            method : 'GET',
+            colorOn :'#6b6764',
+            colorOff :'#0d85a5'
+        });
+        
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+</section>
+<!-- /subscribe section -->
+<!-- map section -->
+<div class="map">
+	<iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3342.378506550204!2d-71.66535998537918!3d-33.09913158695242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e18916c24737%3A0x538e470ef4850db8!2sLaguna+Verde%2C+Valpara%C3%ADso%2C+Regi%C3%B3n+de+Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1479853859470"style="border:0" allowfullscreen></iframe>
+
+</div>
+<!-- /map section -->
+<!-- footer section -->
+
+
+
+
+
+
+<?php 
+
+include("footer.php");
+ ?>
+</html>
