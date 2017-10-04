@@ -1,4 +1,7 @@
   <?php 
+ include  "../model/config/config.php"; 
+
+
      session_start(); 
 
      if(!isset($_SESSION["usuario"]))  {
@@ -11,7 +14,7 @@
        }else{
 $clean= array();  
 $clean["usuario"]=$_POST["usuario"];
-$base= new PDO('mysql:host=localhost; dbname=super', 'root', '');
+$base= new PDO('mysql:host=localhost;dbname='.$bd, $usuario, $pass);
 $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $base->exec("SET CHARACTER SET utf8");
 $sql= "SELECT password FROM clientes_rrhh WHERE nombre_empresa =? ";

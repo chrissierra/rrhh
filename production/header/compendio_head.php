@@ -1,5 +1,4 @@
-<?php
-require("./header/head_servidor.php"); 
+<?php session_start(); 
 require("./model/conexion.php");?>
 
 <!DOCTYPE html>
@@ -28,4 +27,6 @@ require("./model/conexion.php");?>
   </head>
 
   <body class="nav-md" id="body_id">
-      <?php require("./header/header.php"); ?>
+      <?php require("./header/header.php");
+      
+      ?>
