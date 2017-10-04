@@ -2,13 +2,13 @@
 class config{
 
     public $usuario="root";
-    public $pass="jazzmaster";
+    public $pass="";
     public $bd="recursos_humanos";
 }
 
  $usuario="root";
- $pass="jazzmaster";
+ $pass="";
  $bd="recursos_humanos";
 
 
-?>
+?>  

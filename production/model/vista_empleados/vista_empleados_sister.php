@@ -1,4 +1,9 @@
-<?php require("./model/config/config.php"); ?>
+<?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
+
+require("./model/config/config.php"); ?>
 <?php 
  date_default_timezone_set("America/Santiago");
 class trabajador{
