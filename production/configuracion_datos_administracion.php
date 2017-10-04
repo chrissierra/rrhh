@@ -1,5 +1,8 @@
+<?php require("./model/config/config.php"); ?>
 <?php 
+
 require './header/compendio_head.php';
+
 ?>
 <?php
 require './model/afp_isapres/conexion_base_abstracta.php';

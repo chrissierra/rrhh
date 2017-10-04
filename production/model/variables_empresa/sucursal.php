@@ -12,6 +12,6 @@ $request= json_decode($postdata);
 echo $request[2]; // comuna
 
 $ingresa= new crud_variables_empresa;
-$ingresa->insert_mysql_sucursales($request[0], $request[1], $request[2], $request[3], $request[4]);
+$ingresa->insert_mysql_sucursales($request[0], $request[1], $request[2], $request[3], $request[4], $request[5], $request[6]);
 
 ?>

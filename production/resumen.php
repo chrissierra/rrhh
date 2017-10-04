@@ -1,5 +1,7 @@
+<?php require("./model/config/config.php"); ?>
 <?php require("./header/compendio_head.php"); ?>
-<?php $db1 = new PDO('mysql:host=localhost;dbname=recursos_humanos','root','');
+
+<?php $db1 = new PDO('mysql:host=localhost;dbname='.$bd, $usuario, $pass);
 
 $user= $_SESSION["usuario"];
 

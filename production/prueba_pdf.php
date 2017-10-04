@@ -1,5 +1,6 @@
+<?php require("./model/config/config.php"); ?>
 <?php require("./header/compendio_head.php"); ?>
-<?php $db1 = new PDO('mysql:host=localhost;dbname=super','root','');
+<?php $db1 = new PDO('mysql:host=localhost;dbname='.$bd, $usuario, $pass);
 
 $user= $_SESSION["usuario"];
 $resultado9 = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa=$user");

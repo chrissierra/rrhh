@@ -1,4 +1,5 @@
 <?php require("./header/compendio_head.php"); ?>
+<?php require("./model/config/config.php"); ?>
   <div class="right_col" role="main">
           <div class="">
             <div class="page-title">

@@ -1,4 +1,7 @@
 <?php 
+ include  "./model/config/config.php"; 
+
+
 	/*var nombre_rep= document.getElementById("nombre_rep");
 	var email= document.getElementById("email");
 	var numero= document.getElementById("numero");
@@ -91,7 +94,7 @@ print 'nacimiento must be more than 5 characters.';
 }else{
 
 
-$db = new PDO('mysql:host=localhost;dbname=super','root','');
+$db = new PDO('mysql:host=localhost;dbname='.$bd, $usuario, $pass);
 $st= $db->prepare("INSERT INTO clientes_rrhh (nombre_empresa,nombre_rep,email,numero,website,password,textarea,rut_empresa,rut_rep,giro, numero_empleados,nacimiento) VALUES (:nombre_empresa,:nombre_rep,:email,:numero,:website,:password,:textarea,:rut_empresa,:rut_rep,:giro, :numero_empleados,:nacimiento)");
  
 $st->bindParam(":nombre_empresa", $nombre_empresa);

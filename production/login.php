@@ -6,7 +6,7 @@ session_destroy();
 
 
  ?>
-
+<?php require("./model/config/config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

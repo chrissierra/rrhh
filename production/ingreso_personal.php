@@ -1,4 +1,8 @@
+<?php include  "./model/config/config.php"; 
+
+?>
 <?php require("./header/compendio_head.php");
+
 require './model/afp_isapres/conexion_base_abstracta.php';
 require './model/variables_empresa/clase_variables_empresa.php';
 $variables_empresa= new crud_variables_empresa();

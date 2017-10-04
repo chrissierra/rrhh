@@ -1,3 +1,4 @@
+<?php require("./model/config/config.php"); ?>
 <?php require("./header/compendio_head.php"); ?>
 
 

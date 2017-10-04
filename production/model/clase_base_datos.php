@@ -1,5 +1,6 @@
 <?php
-class Users
+
+class Users extends config
 {
 public static $instancia;
 public $dbh;
@@ -7,7 +8,7 @@ public $dbh;
  function __construct()
 {
 try {
-$this->dbh = new PDO('mysql:host=localhost;dbname=recursos_humanos', 'root', '');
+$this->dbh = new PDO('mysql:host=localhost;dbname='.$this->bd, $this->usuario, $this->pass);
 $this->dbh->exec("SET CHARACTER SET utf8");
 $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $this->dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);

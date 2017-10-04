@@ -1,5 +1,8 @@
+<?php include  "./model/config/config.php"; 
+
+?>
 <?php require("./header/compendio_head.php"); ?>
-<?php $db1 = new PDO('mysql:host=localhost;dbname=super','root','');
+<?php $db1 = new PDO('mysql:host=localhost;dbname='.$bd, $usuario, $pass);
 
 $user= $_SESSION["usuario"];
 $resultado9 = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa=$user");
@@ -7,6 +10,9 @@ $resultado9 = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa=$use
  
  
 ?>
+
+
+
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
@@ -65,7 +71,7 @@ echo '<img class="img-responsive avatar-view" src="./Ingreso_Clientes/imagen_log
 
                       <ul class="list-unstyled user_data">
                         <li><i class="fa fa-map-marker user-profile-icon"></i> <?php 
-$db1 = new PDO('mysql:host=localhost;dbname=super','root','');
+$db1 = new PDO('mysql:host=localhost;dbname='.$bd, $usuario, $pass);
 $user= $_SESSION["usuario"];
 $st = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa='$user'");
 
@@ -76,7 +82,7 @@ foreach ($st as $key => $value) {
                         </li>
 
                         <li>
-                          <i class="fa fa-briefcase user-profile-icon"></i> <?php $db1 = new PDO('mysql:host=localhost;dbname=super','root','');
+                          <i class="fa fa-briefcase user-profile-icon"></i> <?php $db1 = new PDO('mysql:host=localhost;dbname='.$bd, $usuario, $pass);
 $user= $_SESSION["usuario"];
 $db1->exec("SET CHARACTER SET utf8");
 $st = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa='$user'");  foreach ($st as $key => $value) {
@@ -86,7 +92,7 @@ $st = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa='$user'");  
 
                         <li class="m-top-xs">
                           <i class="fa fa-external-link user-profile-icon"></i>
-<?php $db1 = new PDO('mysql:host=localhost;dbname=super','root','');
+<?php $db1 = new PDO('mysql:host=localhost;dbname='.$bd, $usuario, $pass);
 $user= $_SESSION["usuario"];
 $db1->exec("SET CHARACTER SET utf8");
 $st = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa='$user'");  foreach ($st as $key => $value) {

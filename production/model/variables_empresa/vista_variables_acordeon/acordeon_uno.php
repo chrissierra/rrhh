@@ -4,7 +4,7 @@
                         </a>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                           <div class="panel-body">
-                            <table class="table table-bordered">
+                            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap">
                               <thead>
                                 <tr>
                                   <th>#</th>
@@ -12,6 +12,8 @@
                                   <th>Dirección</th>
                                   <th>Comuna</th>
                                   <th>Ciudad</th>
+                                  <th>Latitud</th>
+                                  <th>Longitud</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -29,6 +31,8 @@ foreach ($resultado_sucursales as $key => $value) {
                                   <td>'.$value["direccion"].'</td>
                                   <td>'.$value["comuna"].'</td>
                                   <td>'.$value["ciudad"].'</td>
+                                  <td>'.$value["latitud"].'</td>
+                                  <td>'.$value["longitud"].'</td>
                                 </tr>';
                                 $i++;
 }
