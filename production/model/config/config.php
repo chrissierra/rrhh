@@ -7,7 +7,7 @@ class config{
 }
 
  $usuario="root";
- $pass="";
+ $pass="jazzmaster";
  $bd="recursos_humanos";
 
 

@@ -1,5 +1,7 @@
 <?php include  "./model/config/config.php"; 
-
+include  "./model/afp_isapres/conexion_base_abstracta.php"; 
+include  "./model/variables_empresa/clase_variables_empresa.php"; 
+date_default_timezone_set("America/Santiago");
 ?>
 <?php require("./header/compendio_head.php"); ?>
 <?php $db1 = new PDO('mysql:host=localhost;dbname='.$bd, $usuario, $pass);
@@ -11,7 +13,28 @@ $resultado9 = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa=$use
  
 ?>
 
+<script>
+window.addEventListener("load", function(){
+  var path="./model/chat/src/chat.php";
+   fetch(path, {
+        method: 'POST',
+        body: 'id_plataforma='+document.getElementById("id_plataforma").value+"&accion=cliente_plan",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded" }
+        }).then(function(response)  {
+        
+      return response.text();
+    })
+    .then(function(miBlob) {
 
+      localStorage.setItem("id_plataforma",miBlob);
+      localStorage.setItem("nombre",document.getElementById("id_plataforma").value);
+
+    });
+}, false)
+
+</script>
+<input type="hidden" value="<?php echo $_SESSION['usuario']; ?>" id="id_plataforma">
 
         <!-- page content -->
         <div class="right_col" role="main">
@@ -142,7 +165,7 @@ $st = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa='$user'");  
 <!-- ABAJO SE INDICA EL TOTAL Y SUBTOTAL QUE DEBE PAGAR EL EMPLEADOR -->
                     <div class="col-md-9 col-sm-9 col-xs-12">
                        <div>
-                    <p class="lead">Monto adeudado al  2/22/2014</p>
+                    <p class="lead">Dashboard al  <?php echo date("d-m-Y"); ?></p>
                           <div class="table-responsive">
                             <table class="table">
                               <tbody>
@@ -180,8 +203,8 @@ $st = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa='$user'");  
                         <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
                           <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Actividad reciente</a>
                           </li>
-                          <!--<li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Proyectos</a>
-                          </li>-->
+                          <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Asistencia</a>
+                          </li>
                          <!-- <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">Perfil</a>
                           </li>-->
                         </ul>
@@ -192,6 +215,11 @@ $st = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa='$user'");  
 
 
 <?php require './model/clase_base_datos.php';
+$asistencia= new crud_variables_empresa;
+$asistencia_en_bbdd= $asistencia->get_por_query("SELECT * from asistencia where usuario_cliente='".$_SESSION["usuario"]."' AND fecha='".date("Y-m-d")."'");
+
+
+
 $users = Users::singleton();
 $data = $users->get_usuarios("actividad_reciente", $_SESSION["usuario"]);
 
@@ -204,7 +232,7 @@ $dayForDate = date("l", mktime(0, 0, 0, $parts[1], $parts[2], $parts[0]));
 echo (count($data)==0) ? "<h4>No tienes actividad reciente</h4>": "";
 
 foreach($data as $fila): ?>
-
+<!--   -->
 
 
 
@@ -223,11 +251,13 @@ $dayForDate = date("M", mktime(0, 0, 0, $parts[1], $parts[2], $parts[0]));
                                 </div>
                                 <div class="message_wrapper">
                                   <h4 class="heading"><?php echo $fila["afectado"]; ?></h4>
-                                  <blockquote class="message"><?php echo $fila["quehizo"] . "<h6> ".$fila["variable_cambiada"]. "</h6>"; ?></blockquote>
+                                  <blockquote class="message"><?php echo $fila["quehizo"]; ?></blockquote>
                                   <br />
                                   <p class="url">
                                     <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
-                                    <a href="#"><i class="fa fa-paperclip"></i> Visualizar Contrato Trabajador </a>
+                                   
+                                    <a href="<?php echo 'http://localhost/Proyectos/jaja/bower_components/gentelella/production/model/generacion_contratos/vista_contrato.php?trabajador='.$fila['variable_cambiada']; ?>"><i class="fa fa-paperclip"></i> Visualizar Contrato Trabajador </a>
+                                 
                                   </p>
                                 </div>
                               </li>
@@ -241,6 +271,39 @@ $dayForDate = date("M", mktime(0, 0, 0, $parts[1], $parts[2], $parts[0]));
 
 
                           </div>
+
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+  <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+<?php
+ 
+
+?>
+
+
                           <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
 
                             <!-- start user projects -->
@@ -248,61 +311,44 @@ $dayForDate = date("M", mktime(0, 0, 0, $parts[1], $parts[2], $parts[0]));
                               <thead>
                                 <tr>
                                   <th>#</th>
-                                  <th>Project Name</th>
-                                  <th>Client Company</th>
-                                  <th class="hidden-phone">Hours Spent</th>
-                                  <th>Contribution</th>
+                                  <th>Trabajador</th>
+                                  <th>Tipo movimiento</th>
+                                  <th>Hora movimiento</th>
+                                  <th>Asistencia</th>
                                 </tr>
                               </thead>
                               <tbody>
+
+                              <?php foreach ($asistencia_en_bbdd as $key => $value): ?>
                                 <tr>
                                   <td>1</td>
-                                  <td>New Company Takeover Review</td>
-                                  <td>Deveint Inc</td>
-                                  <td class="hidden-phone">18</td>
+                                  <td><?php echo ucwords($value["nombre"]) . " " . ucwords($value["apellido"]); ?></td>
+                                  <td><?php echo ucwords($value["tipo_movimiento"]); ?></td>
+                                  <td><?php echo $value["hora"]; ?></td>
                                   <td class="vertical-align-mid">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-success" data-transitiongoal="35"></div>
+                                      <div class="progress-bar progress-bar-success" data-transitiongoal="90">95%</div>
                                     </div>
                                   </td>
                                 </tr>
-                                <tr>
-                                  <td>2</td>
-                                  <td>New Partner Contracts Consultanci</td>
-                                  <td>Deveint Inc</td>
-                                  <td class="hidden-phone">13</td>
-                                  <td class="vertical-align-mid">
-                                    <div class="progress">
-                                      <div class="progress-bar progress-bar-danger" data-transitiongoal="15"></div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>3</td>
-                                  <td>Partners and Inverstors report</td>
-                                  <td>Deveint Inc</td>
-                                  <td class="hidden-phone">30</td>
-                                  <td class="vertical-align-mid">
-                                    <div class="progress">
-                                      <div class="progress-bar progress-bar-success" data-transitiongoal="45"></div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>4</td>
-                                  <td>New Company Takeover Review</td>
-                                  <td>Deveint Inc</td>
-                                  <td class="hidden-phone">28</td>
-                                  <td class="vertical-align-mid">
-                                    <div class="progress">
-                                      <div class="progress-bar progress-bar-success" data-transitiongoal="75"></div>
-                                    </div>
-                                  </td>
-                                </tr>
+                                <?php endforeach; ?>
                               </tbody>
                             </table>
+                           
                             <!-- end user projects -->
-
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
+ <!--MUESTRA ASISTENCIA -->
                           </div>
                           <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
                             <p>xxFood truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui

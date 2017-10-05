@@ -61,3 +61,4 @@ function obtener_locacion(){
         maximumAge: 0
         })
     }
+    }

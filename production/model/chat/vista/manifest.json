@@ -1,0 +1,7 @@
+{
+  "name": "chat",
+  "short_name": "chat",
+  "description": "Chat para uso como aplicacion y web",
+  "start_url": "/",
+  "display": "standalone"
+}

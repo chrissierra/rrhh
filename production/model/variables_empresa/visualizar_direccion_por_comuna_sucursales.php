@@ -2,7 +2,7 @@
 session_start();
 //echo $_POST["comuna"];
 
-
+require './../config/config.php';
 require './../afp_isapres/conexion_base_abstracta.php';
 require './clase_variables_empresa.php';
 $variables_empresa= new crud_variables_empresa();

@@ -1,4 +1,5 @@
 <?php session_start(); 
+
 require("./model/conexion.php");?>
 
 <!DOCTYPE html>

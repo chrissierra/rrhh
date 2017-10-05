@@ -10,7 +10,7 @@
 
                           <form class="form-horizontal form-label-left" novalidate>
 
-                      <p>Para realizar modificaciones a las actividades de un trabajador o a su estatus debes generar un anexo de trabajo. Si tienes dudas recuerda que cuentas con la asesoría de tu ejecutivo de Sister ERP <a href="./index.php"><span class="fa fa-comments"></span><span  class="label label-warning" style="cursor:pointer">  Chatear con un experto</span></a> .
+                      <p>Para realizar modificaciones a las actividades de un trabajador o a su estatus debes generar un anexo de trabajo. Si tienes dudas recuerda que cuentas con la asesoría de tu ejecutivo de Sister ERP <a href="./model/chat/vista/index.html"><span class="fa fa-comments"></span><span  class="label label-warning" style="cursor:pointer">  Chatear con un experto</span></a> .
                       
                        Sin embargo, si sabes realizar el procedimiento sigue las instrucciones de tu software Sister para generar el documento.   
                         

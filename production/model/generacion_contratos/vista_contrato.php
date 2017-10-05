@@ -2,7 +2,7 @@
 ob_end_clean(); //    the buffer and never prints or returns anything.
 ob_start();
 session_start();
-
+require '../config/config.php';
 require '../../pdf/fpdf.php';
 require_once("../../pdf/contrato/abstracta_contrato_generico.php");
 require '../../pdf/contrato/contrato_clase.php';

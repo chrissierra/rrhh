@@ -41,7 +41,7 @@
                                   <div role="tabpanel" class="tab-pane fade active in" id="tab_content11" aria-labelledby="home-tab">
                                     <p>Recuerda que para despedir a un empleado debes seguir una serie de pasos. Sister ERP te guiará si tienes nociones básicas para el proceso. Si tienes dudas puedes conversar con uno de nuestros ejecutivos y te orientará en el proceso. </p>
 
-                                 <a href="./index.php"><span class="fa fa-comments"></span><span  class="label label-warning" style="cursor:pointer">  Chatear con un experto</span></a> 
+                                 <a href="./model/chat/vista/index.html"><span class="fa fa-comments"></span><span  class="label label-warning" style="cursor:pointer">  Chatear con un experto</span></a> 
                                   <!--  <span class="label label-danger" style="cursor:pointer">Danger</span>-->
 
                                   </div>

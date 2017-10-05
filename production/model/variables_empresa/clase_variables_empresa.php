@@ -35,7 +35,24 @@ function insert_por_query($query){
         echo $this::ERROR;
         }
     }
+    
+function ingreso_chat_sin_ejecucion_exitosa($query){
+    
+        try {
+           
+        $this->conexion();
+        $pdo = $this->dbh->prepare($query);
+        
+        $pdo->execute();
+        $this->dbh = null;
+        
+        } catch (PDOException $e) {
+        echo $e->getMessage();
+        echo $this::ERROR;
+        }
+    }
 
+    
 
 
 
@@ -452,6 +469,21 @@ function actualizar_contrato_bbdd($locacion, $rut_empresa, $representante_legal,
             }
         }
         
+
+        function update_query_sin_ejecucion_exitosa($query){
+            
+                try {
+                   
+                $this->conexion();
+                $pdo = $this->dbh->prepare($query);
+                          $pdo->execute();
+                $this->dbh = null;
+                
+                } catch (PDOException $e) {
+                echo $e->getMessage();
+                echo $this::ERROR;
+                }
+            }
 
 
 function actualizar_beneficios($beneficio, $monto, $id, $costo_total, $entrega_adicional){

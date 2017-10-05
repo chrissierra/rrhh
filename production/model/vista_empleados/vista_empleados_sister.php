@@ -53,6 +53,7 @@ if($_POST["labor"]=="get_query"){
 
     $trabajador->latitud= $value["latitud"];
     $trabajador->longitud= $value["longitud"];
+    $trabajador->nombre_empresa_usuario_plataforma= $value["nombre_empresa_usuario_plataforma"];
     } // FIN FOREACH!!
 
 
@@ -81,7 +82,8 @@ if($_POST["labor"]=="get_query"){
            if(count($array3)>0){ # IF INTERNO2 COMIENZA
             echo "false";
            }else{
-            $base_datos->insert_por_query("INSERT INTO asistencia SET rut='".$_POST['rut']."', id_trabajador='".$_POST['id']."', tipo_movimiento='entrada', fecha=CURDATE(), hora=CURTIME()");
+            $base_datos->insert_por_query("INSERT INTO asistencia SET rut='".$_POST['rut']."', id_trabajador='".$_POST['id']."', tipo_movimiento='entrada', fecha=CURDATE(), hora=CURTIME(), usuario_cliente='".$_POST['nombre_empresa_usuario_plataforma']."', nombre='".$_POST['nombre']."', apellido='".$_POST['apellido']."'");
+            
            }# IF INTERNO2 TERMINA
     }/* IF INTERNO1 COMIENZA    */
 
@@ -105,7 +107,7 @@ if($_POST["labor"]=="get_query"){
 
 $hubo_entrada= $base_datos->get_por_query("SELECT * from asistencia where id_trabajador='".$_POST['id']."' AND fecha='".$fecha_del_dia."' AND tipo_movimiento='entrada'");
 if(count($hubo_entrada)>0){
-    $base_datos->insert_por_query("INSERT INTO asistencia SET rut='".$_POST['rut']."', id_trabajador='".$_POST['id']."', tipo_movimiento='salida', fecha=CURDATE(), hora=CURTIME()");
+    $base_datos->insert_por_query("INSERT INTO asistencia SET rut='".$_POST['rut']."', id_trabajador='".$_POST['id']."', tipo_movimiento='salida', fecha=CURDATE(), hora=CURTIME(),usuario_cliente='".$_POST['nombre_empresa_usuario_plataforma']."', nombre='".$_POST['nombre']."', apellido='".$_POST['apellido']."'");
     $entrega_hora_salida= $base_datos->get_por_query("SELECT * from asistencia where id_trabajador='".$_POST['id']."' AND fecha='".$fecha_del_dia."' AND tipo_movimiento='".$_POST['accion']."'");
                     foreach ($entrega_hora_salida as $key => $value) {
                         # code... 

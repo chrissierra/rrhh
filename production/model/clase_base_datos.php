@@ -35,7 +35,7 @@ public function get_usuarios($tabla, $usuario_administrador)
 {
 try {
     $tabla="actividad_reciente";
-$query = $this->dbh->query('SELECT * FROM '. $tabla .' WHERE quienhizo="'.$usuario_administrador.'" ORDER BY cuando desc LIMIT 5    ' );
+$query = $this->dbh->query('SELECT * FROM '. $tabla .' WHERE quienhizo="'.$usuario_administrador.'" ORDER BY id desc LIMIT 5    ' );
 //$query->execute();
 return $query->fetchAll();
 $this->dbh = null;
