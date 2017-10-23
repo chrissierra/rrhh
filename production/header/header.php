@@ -10,15 +10,25 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Sister ERP</span></a>
+              <a href="index.php" class="site_title"><i id="logo_sister" class="fa fa-group"></i> <span>Sister ERP</span></a>
             </div>
 
             <div class="clearfix"></div>
+<!-- <?php 
+// echo '<img class="img-responsive avatar-view" src="./Ingreso_Clientes/imagen_logos/'.$_SESSION["usuario"].'.png" alt="Avatar" title="Change the avatar">';
 
+?> -->
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/user.png" alt="..." class="img-circle profile_img">
+
+
+              <!--  <img src="images/user.png" alt="..." class="img-circle profile_img">-->
+<?php 
+echo '<img class="img-circle profile_img" src="./Ingreso_Clientes/imagen_logos/'.$_SESSION["usuario"].'.png" alt="Avatar" title="Change the avatar">';
+
+?> 
+              
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
@@ -38,14 +48,17 @@
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                      <li><a href="./index.php">Inicio</a></li>
-                      <li><a href="ingreso_personal.php">Ingresa Personal</a></li>
+                     
                       <!--<li><a href="index2.html">Dashboard2</a></li>
                       <li><a href="index3.html">Dashboard3</a></li>-->
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Resumen <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="glyphicon glyphicon-folder-open"></i>&nbsp;&nbsp;&nbsp; Menú <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
+                    <li><a href="ingreso_personal.php">Ingresa Personal</a></li>
                       <li><a href="resumen.php">Visualiza Personal</a></li>
+                      <li><a href="libros.php?id=remuneraciones">Libro remuneraciones</a></li>
+                      <li><a href="libros.php?id=asistencia">Libro asistencia</a></li>
                       <!--<li><a href="form_advanced.html">Advanced Components</a></li>
                       <li><a href="form_validation.html">Form Validation</a></li>
                       <li><a href="form_wizards.html">Form Wizard</a></li>
@@ -53,7 +66,7 @@
                       <li><a href="form_buttons.html">Form Buttons</a></li>-->
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> Contacto <span class="fa fa-chevron-down"></span></a>
+               <!--   <li><a><i class="fa fa-desktop"></i> Contacto <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="general_elements.html">General Elements</a></li>
                       <li><a href="media_gallery.html">Media Gallery</a></li>
@@ -195,7 +208,7 @@
                     </li>
 
                       <li>
-                      <?php if($_SESSION["usuario"]=="Administrador"){
+                      <?php if(isset($_SESSION["usuario"])){
                      echo '<a href="configuracion_datos_administracion.php">
                         <span>'. 'Configuracion' .'</span>';   
                       }else{

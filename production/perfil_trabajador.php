@@ -85,9 +85,9 @@ $resultado = $db1->query("SELECT * from ingreso_empleados WHERE nombre_empresa_u
                         </li>
                         <li><a href="#profile" data-toggle="tab">Acciones</a>
                         </li>
-                        <li><a href="#messages" data-toggle="tab">Anexos Contrato</a>
+                        <li><a href="#messages" data-toggle="tab">Documentos</a>
                         </li>
-                        <li><a href="#settings" data-toggle="tab">Consultas</a>
+                        <li><a href="#settings" data-toggle="tab">Resumen</a>
                         </li>
                       </ul>
                     </div>
@@ -166,8 +166,12 @@ $resultado = $db1->query("SELECT * from ingreso_empleados WHERE nombre_empresa_u
                               </ul>
                             </div>
                             <div class="right col-xs-5 text-center">
-                              <img src="images/user.png" alt="" class="img-circle img-responsive">
+
+ <img src="<?php echo $peo= (strlen($row['formato_archivo_imagen'])) > 3 ? "data:".($row["formato_archivo_imagen"]) ."; base64,".($row["foto"]) ."" : "./images/user.png" ; ?>" alt="" class="img-circle img-responsive">
+                           
+                           
                             </div>
+                    
                           </div>
                           <div class="col-xs-12 bottom text-center">
                             <div class="col-xs-12 col-sm-6 emphasis">
@@ -214,8 +218,11 @@ $resultado = $db1->query("SELECT * from ingreso_empleados WHERE nombre_empresa_u
                     <!-- end of accordion -->
                     </div>
 
-                        <div class="tab-pane" id="messages">Messages Tab.</div>
-                        <div class="tab-pane" id="settings">Settings Tab.</div>
+                        <div class="tab-pane" id="messages"><?php require("./model/documentos_resumen_trabajador/documentos.php"); ?></div>
+
+
+
+                        <div class="tab-pane" id="settings"><?php require("./model/documentos_resumen_trabajador/resumen.php"); ?></div>
 
                         </div>
                 </div>
@@ -465,5 +472,6 @@ MODAL QUE PRESENTA LOS ANEXOS QUE YA TIENE EL TRABAJADOR
 
        <!-- easy-pie-chart -->
        <script src="../vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+       <?php require("./model/chat/chat_embebido/chat.php"); ?>
   </body>
 </html>

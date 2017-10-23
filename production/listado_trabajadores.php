@@ -163,6 +163,6 @@ echo ' <tr>
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-
+    <?php require("./model/chat/chat_embebido/chat.php"); ?>
   </body>
 </html>

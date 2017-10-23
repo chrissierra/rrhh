@@ -1,5 +1,5 @@
 <?php require("./model/config/config.php"); ?>
-<?php r|quire("./header/compendio_head.php"); ?>
+<?php require("./header/compendio_head.php"); ?>
    <!-- NProgress -->
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->

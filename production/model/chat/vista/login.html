@@ -184,13 +184,20 @@ var path="../src/chat.php";
       return response.text();
     })
     .then(function(miBlob) {
-alert(miBlob);
-      if(miBlob = "true"){
+//alert(miBlob);
+var obj = new String('true');
+//alert(obj)
+      if(miBlob.trim() === obj.trim()){
+  //     alert("en true")
           localStorage.setItem("id_plataforma",document.getElementById("correo").value)
           localStorage.setItem("nombre",document.getElementById("nombre").value)
-      location.href="./index.html";
+          location.href="./index.html";
       }else{
-       console.log("error")
+
+//alert("si miblob fuera otra cosa q true....")
+        localStorage.setItem("id_plataforma","administrador")
+          localStorage.setItem("nombre","Administrador")
+           location.href="./index.html";
       }
    
 

@@ -203,7 +203,7 @@ echo '<option value="' .$value["tipo_contrato"] .'" class="tipo_contrato">'.$val
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombres <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="hidden" class="contrato_parte_estandar" id="nombre_empresa" value=<?php echo $_SESSION["usuario"]; ?> >
+                            <input type="hidden" class="contrato_parte_estandar" id="nombre_empresa" value='<?php echo $_SESSION["usuario"]; ?>'  >
                               <input name="nombre" type="text" id="nombre"  class="form-control col-md-7 col-xs-12 contrato_parte_estandar">
                             </div>
                           </div>
@@ -2440,6 +2440,6 @@ array2.push(fin_input1[i].value);
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
 
-	
+    <?php require("./model/chat/chat_embebido/chat.php"); ?>
   </body>
 </html>

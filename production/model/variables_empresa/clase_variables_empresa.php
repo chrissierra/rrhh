@@ -325,6 +325,66 @@ echo $e;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function make_fetch($query)
+{
+try {
+    $this->conexion();
+$query = $this->dbh->prepare($query);
+$query->execute();
+return $query;
+$this->dbh = null;
+echo $this::EXITO;
+}catch (PDOException $e) {
+$e->getMessage();
+echo $this::ERROR;
+echo $e;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public function get_por_parametro_beneficio_para_actualizar($usuario, $id)
 {
 try {
@@ -418,7 +478,19 @@ public function get_()
                }
 }
 
+public function get_individual($query)
+{
+try {
+    $this->conexion();
+$query = $this->dbh->query($query);
+return $query->fetch();
+$this->dbh = null;
 
+}catch (PDOException $e) {
+$e->getMessage();
+echo $this::ERROR;
+}
+}
 
 
 
@@ -468,6 +540,59 @@ function actualizar_contrato_bbdd($locacion, $rut_empresa, $representante_legal,
             echo $this::ERROR;
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function update_bindparams($query){
+            
+                try {
+                    $db=new PDO('mysql:host=localhost;dbname='.$this->bd, $this->usuario, $this->pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+                    $nueva= $db->prepare($query);                
+                       return $nueva;
+                } catch (PDOException $e) {
+                echo $e->getMessage();
+                echo $this::ERROR;
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
 
         function update_query_sin_ejecucion_exitosa($query){
@@ -547,7 +672,21 @@ function borrar_beneficio($id){
     }
 }
 
-
+function borrar_query($query){
+    
+        try {
+            $tabla="beneficios";
+        $this->conexion();
+        $pdo = $this->dbh->prepare($query);
+        $pdo->execute();
+        $this->dbh = null;
+        echo $this::EXITO;
+        } catch (PDOException $e) {
+        echo $e->getMessage();
+        echo $this::ERROR;
+        }
+    }
+    
 
 
 // ---------------------------------------------------------------------------------------------------------------------------

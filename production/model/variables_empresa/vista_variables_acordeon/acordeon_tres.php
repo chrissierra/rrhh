@@ -178,7 +178,7 @@ $verifica_ingreso= count($resultado_contrato);
 
 
 
-                      <input disabled="disabled"  type="hidden" value=<?php echo $resultado_contrato[0]["id"] ?> class="contratos">
+                      <input disabled="disabled"  type="hidden" value='<?php echo $_SESSION['usuario']; ?>' class="contratos">
 
 
                       
@@ -241,4 +241,4 @@ if($verifica_ingreso==0){
 
                       </div>
                     </div>
-                  </div>                      
+                  </div>                    

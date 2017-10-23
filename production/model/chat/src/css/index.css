@@ -1,0 +1,119 @@
+
+    body {
+        
+              margin: 0;
+              font-family: 'Roboto', 'Noto', sans-serif;
+              background-color:white;
+            }
+        
+            app-header {
+              background-color: #4285f4;
+              color: #fff;
+            }
+        
+            app-header paper-icon-button {
+              --paper-icon-button-ink-color: #fff;
+            }
+        
+            app-drawer-layout {
+              --app-drawer-layout-content-transition: margin 0.2s;
+            }
+        
+            app-drawer {
+              --app-drawer-content-container: {
+                background-color:white;
+              }
+            }
+        
+            .drawer-content {
+              margin-top: 80px;
+              height: calc(100% - 80px);
+              overflow: auto;
+            }
+        
+        
+            .footer {
+            position: fixed;
+            height: 15%;
+            bottom: 0;
+            width: 100%;
+            background-color: #f5f1ee;
+            color: black;
+           
+            
+        }
+        #div_textarea{
+          
+         display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-content: space-between;
+        }
+        
+        #div_exacto_textarea{
+          background:rgba(255,255,255, 0.5);
+          /*
+          width: 85%;
+          */
+          flex-grow: 60;
+          border-radius: 15px;
+          margin:12px;
+        
+          max-width: 88%;
+          max-height:90px;
+          overflow:auto;
+          margin-bottom:10px;
+          border-bottom:0;
+        }
+        
+        #div_exacto_icon{
+          
+          flex-grow: 5;
+          margin-top:28px;
+          margin-left:29px;
+          margin-right:-15px;
+         
+        
+        }
+        
+        
+        #texto{
+          margin-left:25px;
+          margin-right:25px;
+          margin-bottom:11px;
+          
+        }
+        
+        iron-icon {
+                transition: all 0.2s;
+                -webkit-transition: all 0.2s;
+              }
+        
+              iron-icon:hover {
+                fill: var(--google-yellow-700);
+              }
+        
+        
+              #contenedor_mensajes{
+        margin-bottom:280px;
+        
+              }
+        
+              @media screen and (max-width: 480px) {
+            
+                .footer {
+                  position: fixed;
+                  height: 25%;
+                  bottom: 0;
+                  width: 100%;
+                  background-color: #f5f1ee;
+                  color: black;
+                 
+                  
+              }
+        
+              #contenedor_mensajes{
+        margin-bottom:280px;
+        
+              }
+        }

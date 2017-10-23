@@ -126,7 +126,8 @@ $asignacion_colacion_sin_con=utf8_decode($_POST["asignacion_colacion_sin_con"]);
 $monto_asignacion_colacion=utf8_decode($_POST["monto_asignacion_colacion"]);
 
 
-$guardando_latitud_longitud= $variables_empresa->get_por_query("SELECT * FROM sucursales where direccion='".$direccion_sucursal."'");
+$guardando_latitud_longitud= $variables_empresa->get_por_query("SELECT * FROM sucursales where direccion='".utf8_encode($direccion_sucursal)."'");
+echo "DIIRECCION SUCURSAL: ".$direccion_sucursal;
 foreach ($guardando_latitud_longitud as $key => $value) {
     # code...
     $latitud= $value["latitud"];
@@ -136,7 +137,7 @@ foreach ($guardando_latitud_longitud as $key => $value) {
 
 $variables_empresa->insertar_nuevo_trabajador($nombre, $apellido, $edad, $sexo, $nacimiento,$direccion, $sueldo, $puesto, $empresa, $jefatura,$rut, $isapre, $afp, $horario,$nacionalidad_empleado,$horas_jornada,$empresa_previa,$direccion_sin_comuna_empleado,$comuna_empleado,$sueldo_escrito,$ultimo_dia_semana_jornada,$hora_entrada_jornada,$hora_salida_jornada,$descanso_o_almuerzo_en_minutos,$hora_inicio_descanso,$hora_fin_descanso,$tipo_contrato, $comuna_sucursal, $direccion_sucursal, $estado_civil, $codigo_actividad_economica, $servicio_salud_que_aprueba, $tecnico_o_profesional,$numero_inscripcion, $numero_dias_trabajar_semanal, $bono_locomocion_mensual,$viatico_diario,$duracion_contrato,	$nombre_produccion,	$locacion_produccion, $nombre_de_la_obra, $locacion_de_la_obra, $comuna_locacion_obra, $tipo_de_pago,$cantidad_a_pagar,$gratificaciones, $incentivos, $bonos, $asignacion_movilizacion_con_sin, $monto_asignacion_movilizacion,$asignacion_desgaste_herramientas_sin_con,$monto_asignacion_desgastes_herramientas, $asignacion_matrimonio_sin_con, $monto_asignacion_matrimonio, $nombre_establecimiento, $tiempo_de_pago,$transporte_entre,$tareas_a_desarrollar, $horas_diarias_descanso_chofer, $dias_descanso_chofer, $monto_pago_colacion_diario, $oficio,	$maestro_o_guia, $duracion_contrato_aprendizaje,	$establecimiento_educacional, $docente_coordinador, $condiciones_buena_practica,	$total_horas_cronologicas_practica,	$tope_reembolsos_a_estudiante,$dias_inasistencias_permitidos, $cantidad_semanal_minima_horas, $monto_por_unidad, $nombre_predio_agricola, $profesion_oficio_contratado, $ubicacion_predio,	$tipo_pago_agricola,	$monto_fijo, $pago_detalle_y_monto_a_trato, $regalias, $entrega_racion_tierra, $servicios_a_entregar_trabajador, $nombre_usuario_plataforma_cliente, $capitulos_totales_contemplados, $inicio_rodaje, $fin_rodaje, $forma_de_pago_sueldo, $primer_dia_semana_jornada, $ciudad_obra_construccion, $monto_adelanto, $fecha_adelanto, $fecha_pago_sueldo,$asignacion_colacion_sin_con,$monto_asignacion_colacion, $latitud, $longitud);
 
-$variables_empresa->insert_por_query('INSERT INTO actividad_reciente SET quienhizo="'.$nombre_usuario_plataforma_cliente.'", afectado="Contratación",cuando=CURDATE(), quehizo="Ingreso nuevo empleado '.$nombre.' '.$apellido.'",variable_cambiada="'.$rut.'"');
+$variables_empresa->insert_por_query('INSERT INTO actividad_reciente SET quienhizo="'.utf8_encode($nombre_usuario_plataforma_cliente).'", afectado="Contratación",cuando=CURDATE(), quehizo="Ingreso nuevo empleado '.utf8_encode($nombre).' '.utf8_encode($apellido).'",variable_cambiada="'.utf8_encode($rut).'"');
 
 $chao=explode(",", $_POST["incentivos"]);
 

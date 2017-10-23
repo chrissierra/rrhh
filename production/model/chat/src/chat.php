@@ -6,7 +6,7 @@ class chat extends algo{
     
      public function ingreso_chat($id_plataforma, $nombre, $email, $tipo,$leido,$mensaje,  $blob_chat, $objeto_base_datos){
     
-        $objeto_base_datos->ingreso_chat_sin_ejecucion_exitosa("INSERT INTO chat SET leido='".$leido."' , id_plataforma='".$id_plataforma."', nombre='".$nombre."', mensaje='".$mensaje."', hora=CURTIME(), fecha=CURDATE()");
+        $objeto_base_datos->ingreso_chat_sin_ejecucion_exitosa("INSERT INTO chat SET id_plataforma='".$id_plataforma."',leido='false', nombre='".$nombre."', mensaje='".$mensaje."', hora=CURTIME(), fecha=CURDATE()");
      }
     
      public function verificar_variables(){
@@ -64,16 +64,27 @@ $chat= new chat();
 switch ($_POST["accion"]) {
 
     case "envio_mensaje":
+        
         $chat->ingreso_chat($_POST["id_plataforma"], $_POST["nombre"], $email, $tipo,"false",$_POST["texto"],  $blob_chat, $objeto_base_datos);
        
         break;
+
+
+
     case "actualizacion_por_intervalos":
     $json_objeto=$chat->actualizacion_por_intervalos($objeto_base_datos, $_POST["id_plataforma"]);
     echo $json_objeto;
         break;
+
+
+
     case "ingreso_cliente_externo":
-    $chat->ingreso_chat($_POST["email"], $_POST["nombre"], "cliente_externo", "false","","","", $objeto_base_datos);
-    echo "true";
+    if($_POST["email"]=="christopher.sierra@usach.cl" && $_POST["nombre"]=="csierra"){
+        echo "administrador";
+    }else{
+        $chat->ingreso_chat($_POST["email"], $_POST["nombre"], "cliente_externo", "false","","","", $objeto_base_datos);
+        echo "true";
+    }
         break;
 
 
@@ -85,6 +96,49 @@ switch ($_POST["accion"]) {
         }
         echo $id;
             break;
+
+
+
+
+
+
+
+
+            case "administrador_vista_onload":
+            $variable= $objeto_base_datos->get_por_query("SELECT DISTINCT id_plataforma, nombre FROM chat ");
+            $id="";
+            foreach ($variable as $key => $value) {
+                $id.= $value["id_plataforma"]. ",";
+               $id.= $value["nombre"]. ",";
+            }
+
+            $uno= explode(",", $id);
+            $kaka= json_encode($uno);
+            echo $kaka;
+                break;
+
+
+
+
+
+
+                case "actualizar_todo":
+                $variable= $objeto_base_datos->get_por_query("SELECT * FROM chat where id_plataforma='".$_POST["id_plataforma"]."'");
+                $id="";
+                foreach ($variable as $key => $value) {
+
+                    $id.='<paper-card style="border-radius: 15px;margin:15px;" heading="'.$value["nombre"].'" alt="Emmental"><div class="card-content">'.$value["mensaje"].'</div></paper-card>';
+                   
+                }
+    
+               
+                echo $id;
+                    break;
+                #actualizar_todo
+
+
+            
+
 }
 
 

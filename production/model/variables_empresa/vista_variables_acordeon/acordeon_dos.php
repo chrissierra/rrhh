@@ -112,7 +112,7 @@ foreach ($resultado_sucursales as $key => $value) {
 
 
                          
-                      <input type="hidden" value=<?php echo $_SESSION["usuario"]; ?> class="beneficio_clase" id="usuario_input_hidden">
+                      <input type="hidden" value='<?php echo $_SESSION["usuario"]; ?>'  class="beneficio_clase" id="usuario_input_hidden">
                      
                     </form>
                   

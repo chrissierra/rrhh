@@ -18,7 +18,7 @@ var boton= document.querySelector("#finalizar").addEventListener("click", peo, f
 
 function peo(){
 
-fetch('./hola1.php', {
+fetch('./server_ingreso_clientes_externos.php', {
 
     method: 'POST',
     headers: {'Content-Type':'application/x-www-form-urlencoded'}, // this line is important, if this content-type is not set it wont work
@@ -29,7 +29,8 @@ fetch('./hola1.php', {
     return response.text();
 
 }).then(function(text) { 
-
+	alert(text)
+alert("asdfasdf")
 return text;
            
 

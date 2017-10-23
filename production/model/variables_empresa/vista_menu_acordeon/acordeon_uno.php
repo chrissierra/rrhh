@@ -61,7 +61,7 @@
 
 
 
-
+<script src="./js/formwizard_desvincular.js"></script>
 
 
 
@@ -71,7 +71,7 @@
                                   <div class="col-md-12 col-sm-12 col-xs-12">
                                   <div class="x_panel">
                                     <div class="x_title">
-                                      <h2>Form Wizards <small>Sessions</small></h2>
+                                      <h2>Gestión RRHH <small>Desvincular</small></h2>
                                       <ul class="nav navbar-right panel_toolbox">
                                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
@@ -90,14 +90,15 @@
                                       <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
-                  
+                   
+            
                   
                                       <!-- Smart Wizard -->
-                                      <p>This is a basic form wizard example that inherits the colors from the selected scheme.</p>
+                                      <p>Siguiendo el proceso paso a paso generarás el documento para despedir al trabajador de tu organización.</p>
                                       <div id="wizard" class="form_wizard wizard_horizontal">
                                         <ul class="wizard_steps">
                                           <li>
-                                            <a href="#step-1">
+                                            <a href="#step-one">
                                               <span class="step_no">1</span>
                                               <span class="step_descr">
                                                                 Step 1<br />
@@ -133,7 +134,7 @@
                                             </a>
                                           </li>
                                         </ul>
-                                        <div id="step-1">
+                                        <div id="step-one">
                                           <form class="form-horizontal form-label-left">
                   
                                             <div class="form-group">

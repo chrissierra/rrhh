@@ -130,6 +130,6 @@ $resultado = $db1->query("SELECT * from ingreso_empleados WHERE nombre_empresa_u
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-
+<?php require("./model/chat/chat_embebido/chat.php"); ?>
   </body>
 </html>

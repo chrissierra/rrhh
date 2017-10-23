@@ -27,7 +27,7 @@ $_SESSION["usuario"]=$_POST["usuario"];
 header("location:../index.php");
 }else{
   echo "no funciona";
-  header("location:./login.php");
+  header("location:../login.php");
 }
 
 

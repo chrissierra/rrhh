@@ -24,7 +24,7 @@ array1.push(localStorage.getItem("longitud"));
 function obtener_locacion(){
     var options = {
     enableHighAccuracy: true,
-    timeout: 5000,
+    timeout: 1000,
     maximumAge: 0
   };
   
@@ -54,10 +54,10 @@ function obtener_locacion(){
 
 
   function calibrando_gps(){
-    for (var index = 0; index < 15; index++) {
+    for (var index = 0; index < 150; index++) {
       navigator.geolocation.getCurrentPosition(function(pos){console.log(pos.coords)}, function(){console.log("error")}, {
         enableHighAccuracy: true,
-        timeout: 5000,
+        timeout: 1000,
         maximumAge: 0
         })
     }

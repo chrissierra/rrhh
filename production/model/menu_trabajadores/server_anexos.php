@@ -1,4 +1,5 @@
 <?php
+require '../config/config.php';
 require '../afp_isapres/conexion_base_abstracta.php';
 require '../variables_empresa/clase_variables_empresa.php';
 $base= new crud_variables_empresa();

@@ -109,7 +109,7 @@ foreach ($resultado_sucursales as $key => $value) {
                           <input id="name" class="form-control col-md-7 col-xs-12 surcursal_clase" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="Ciudad" required="required" type="text">
                         </div>
                       </div>
-                      <input type="hidden" value=<?php echo $_SESSION["usuario"]; ?> class="surcursal_clase">
+                      <input type="hidden" value='<?php echo $_SESSION["usuario"]; ?>' class="surcursal_clase">
                      
                     </form>
                   

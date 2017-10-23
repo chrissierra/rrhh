@@ -13,103 +13,10 @@
     <script src="./bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
     <link rel="import" href="./src/chat-app/chat-app.html">
+    <link rel="stylesheet" href="../src/css/index.css">
   </head>
   <custom-style>
     <style is="custom-style">
-
-    body {
-      margin: 0;
-      font-family: 'Roboto', 'Noto', sans-serif;
-      background-color:white;
-    }
-
-    app-header {
-      background-color: #4285f4;
-      color: #fff;
-    }
-
-    app-header paper-icon-button {
-      --paper-icon-button-ink-color: #fff;
-    }
-
-    app-drawer-layout {
-      --app-drawer-layout-content-transition: margin 0.2s;
-    }
-
-    app-drawer {
-      --app-drawer-content-container: {
-        background-color:white;
-      }
-    }
-
-    .drawer-content {
-      margin-top: 80px;
-      height: calc(100% - 80px);
-      overflow: auto;
-    }
-
-
-    .footer {
-    position: fixed;
-    height: 10%;
-    bottom: 0;
-    width: 100%;
-    background-color: #f5f1ee;
-    color: black;
-   
-    
-}
-#div_textarea{
-  
- display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: space-between;
-}
-
-#div_exacto_textarea{
-  background:rgba(255,255,255, 0.5);
-  /*
-  width: 85%;
-  */
-  flex-grow: 60;
-  border-radius: 15px;
-  margin:12px;
-
-  max-width: 88%;
-  max-height:90px;
-  overflow:auto;
-  margin-bottom:10px;
-  border-bottom:0;
-}
-
-#div_exacto_icon{
-  
-  flex-grow: 5;
-  margin-top:28px;
-  margin-left:29px;
-  margin-right:-15px;
- 
-
-}
-
-
-#texto{
-  margin-left:25px;
-  margin-right:25px;
-  margin-bottom:11px;
-  
-}
-
-iron-icon {
-        transition: all 0.2s;
-        -webkit-transition: all 0.2s;
-      }
-
-      iron-icon:hover {
-        fill: var(--google-yellow-700);
-      }
-
 
     </style>
   </custom-style>
@@ -128,27 +35,45 @@ iron-icon {
     
           <app-drawer slot="drawer">
             <div class="drawer-content">
-              <paper-icon-item>
-                <iron-icon icon="inbox" slot="item-icon"></iron-icon> <span>Inbox</span>
-              </paper-icon-item>
-              <paper-icon-item>
-                <iron-icon icon="query-builder" slot="item-icon"></iron-icon> <span>Snoozed</span>
-              </paper-icon-item>
-              <paper-icon-item>
-                <iron-icon icon="done" slot="item-icon"></iron-icon> <span>Done</span>
-              </paper-icon-item>
-              <paper-icon-item>
-                <iron-icon icon="drafts" slot="item-icon"></iron-icon> <span>Drafts</span>
-              </paper-icon-item>
-              <paper-icon-item>
-                <iron-icon icon="send" slot="item-icon"></iron-icon> <span>Sent</span>
-              </paper-icon-item>
-              <paper-icon-item>
-                <iron-icon icon="delete" slot="item-icon"></iron-icon> <span>Trash</span>
-              </paper-icon-item>
-              <paper-icon-item>
-                <iron-icon icon="report" slot="item-icon"></iron-icon> <span>Spam</span>
-              </paper-icon-item>
+
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+
+
+
+<div role="listbox" id="listado">
+    <paper-item>Inbox</paper-item>
+    <paper-item>Starred</paper-item>
+    <paper-item>Sent mail</paper-item>
+  </div>
+
+
+
+
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+<!-- DISPONER LOS CONTACTOS PARA HABLAR   -->
+
             </div>
           </app-drawer>
           
@@ -166,103 +91,8 @@ iron-icon {
           </div>
         </div>
          
-
-
-        
-
-        
-        </app-drawer-layout>
-    
-      </app-header-layout>
-    
-      <script>
-
-
-
-        var drawerLayout = document.getElementById('drawerLayout');
-        toggle.addEventListener('click', function() {
-          if (drawerLayout.forceNarrow || !drawerLayout.narrow) {
-            drawerLayout.forceNarrow = !drawerLayout.forceNarrow;
-          } else {
-            drawerLayout.drawer.toggle();
-          }
-        });
-
-
-var boton= document.getElementById("boton");
-boton.addEventListener("click", function(){
-enviar_mensajes();
-}, false)
-
-
-function enviar_mensajes(){
-  var id="dummy";
-  var texto=document.getElementById("texto").value;
-  var accion="envio_mensaje";
-
-  path="../src/chat.php";
-   fetch(path, {
-        method: 'POST',
-        body: 'texto='+texto+'&accion='+accion+'&id_plataforma='+localStorage.getItem("id_plataforma")+"&nombre="+localStorage.getItem("nombre"),
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded" }
-        }).then(function(response)  {
-        
-      return response.text();
-    })
-    .then(function(miBlob) {
-      document.getElementById("texto").value="";
-//alert(miBlob);
-
-    });
-}
-
-setInterval(intervalos, 800);
-
-function intervalos(){
-  var id="dummy";
-  var texto=document.getElementById("texto").value;
-  var accion="actualizacion_por_intervalos";
-
-  path="../src/chat.php";
-   fetch(path, {
-        method: 'POST',
-        body: 'texto='+texto+'&accion='+accion+'&id_plataforma='+localStorage.getItem("id_plataforma"),
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded" }
-        }).then(function(response)  {
-        
-      return response.json();
-    })
-    .then(function(miBlob) {
-
-      if(miBlob.nombre== null){
-      
-      }else{
-        document.getElementById("contenedor_mensajes").innerHTML+='<paper-card style="border-radius: 15px;margin:15px;" heading="'+miBlob.nombre+'" alt="Emmental"><div class="card-content">'+miBlob.mensaje+'</div></paper-card>';
-      }
-   
-
-
-    });
-}// fin funcion intervalos
-
-
-
-
-
-
-window.addEventListener("load", function(){
-console.log("en funcion load window");
-}, false);
-
-
-
-
-
-
-      
-      </script>
-    
+ </app-drawer-layout>
+      </app-header-layout>    
     </body>
+    <script src="../src/css/index.js"></script>
 </html>

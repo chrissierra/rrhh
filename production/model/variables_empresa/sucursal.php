@@ -1,4 +1,5 @@
 <?php
+require_once("../config/config.php");
 require_once("../afp_isapres/conexion_base_abstracta.php");
 require_once("./clase_variables_empresa.php");
 
