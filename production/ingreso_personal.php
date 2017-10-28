@@ -629,7 +629,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 <!--INPUT PARA FORMULARIO DE DATOS DEL TRABAJO, SUELDO LIQUIDO, JEFATURA, EDIFICIO, SUCURSAL, ETC -->
 
 <!--INPUT PARA FORMULARIO DE DATOS DEL TRABAJO, SUELDO LIQUIDO, JEFATURA, EDIFICIO, SUCURSAL, ETC -->
-<div class="form-group prevencion_riesgos" style="display:none" >
+<div class="form-group"  ><!-- el 28-10-2017, para contabilizar dias trabajados, le sake centinela de prevencion, y ahora corre para todos, tbn le sako display:none, asi se visualiza para todos... -->
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Número de días a trabajar semanal <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">

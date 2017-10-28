@@ -155,8 +155,6 @@ require("./model/chat/chat_embebido/chat.php"); ?>
     <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
     <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
 
 
 
@@ -189,10 +187,17 @@ require("./model/chat/chat_embebido/chat.php"); ?>
     <!-- jQuery Knob -->
     <script src="../vendors/jquery-knob/dist/jquery.knob.min.js"></script>
     <!-- Cropper -->
-    <script src="../vendors/cropper/dist/cropper.min.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
+
+
+
+<!-- datepicker -->
+
+
+<link rel="stylesheet" href="./js/jquery_ui/jquery-ui.css">
+<script src="./js/jquery_ui/jquery-ui.js"></script>
 
 </html>
 <?php ob_end_flush(); ?>
