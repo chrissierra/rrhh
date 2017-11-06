@@ -1,6 +1,18 @@
 <?php require("./model/config/config.php"); ?>
-<?php require("./header/compendio_head.php"); ?>
-<?php $db1 = new PDO('mysql:host=localhost;dbname='.$bd, $usuario, $pass);
+<?php require("./header/compendio_head.php"); 
+ 
+
+ include  "./model/afp_isapres/conexion_base_abstracta.php"; 
+ include  "./model/variables_empresa/clase_variables_empresa.php"; 
+ include './model/documentos_resumen_trabajador/clase_planilla_rrhh/clase_compendio_variables.php';
+ include './model/documentos_resumen_trabajador/clase_planilla_rrhh/clase_libro_remuneraciones.php';
+ include './model/documentos_resumen_trabajador/clase_planilla_rrhh/clase_libro_asistencia.php';
+ date_default_timezone_set("America/Santiago");
+
+?>
+<?php 
+
+$db1 = new PDO('mysql:host=localhost;dbname='.$bd, $usuario, $pass);
 $db1->exec('SET CHARACTER SET utf8');
 $user= $_SESSION["usuario"];
 $empleado=$_GET["id"];
@@ -212,6 +224,8 @@ $resultado = $db1->query("SELECT * from ingreso_empleados WHERE nombre_empresa_u
 <?php require("./model/variables_empresa/vista_menu_acordeon/acordeon_dos.php"); ?>
 
 <?php require("./model/variables_empresa/vista_menu_acordeon/acordeon_tres.php"); ?>
+
+<?php require("./model/variables_empresa/vista_menu_acordeon/acordeon_cuatro.php"); ?>
 
 
                     </div>

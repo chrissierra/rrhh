@@ -8,7 +8,11 @@ require './../documentos_resumen_trabajador/clase_planilla_rrhh/clase_libro_remu
 $libro= new libro_asistencia($_POST["id_usuario"]);
 
 if($_POST["accion"] == "diario"){
+    $libro->periodo=$_POST["variable"];
     $libro->tabla_por_dia();
+}elseif ($_POST["accion"] == "mes") {
+    $libro->periodo=$_POST["variable_mes"];
+    $libro->tabla_por_mes($_POST["variable_mes"], $_POST["variable_año"]);
 }
 
 ?>

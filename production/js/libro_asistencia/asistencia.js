@@ -25,8 +25,8 @@ function ir_asistencia_funcion(e){
        //fetch para mostrar tabla segun fecha mensual
   var input_mes=document.getElementById("input_mes").value;
   var input_año=document.getElementById("input_año").value;
-  
-  
+  data= "accion=mes&variable_mes="+input_mes+"&variable_año="+input_año+"&id_usuario="+id_usuario_constructor_clase;
+  ajax_fetch(path, data, funcion_resolve1);
   
   
   
@@ -46,7 +46,7 @@ function ir_asistencia_funcion(e){
   
 function funcion_resolve1(d){
     var tabla_fetch=document.getElementById("tabla_fetch");
-///alert(d);
+alert(d);
 tabla_fetch.innerHTML=d;
 }
 
@@ -110,7 +110,8 @@ tabla_fetch.innerHTML=d;
       $( function() {
           $( "#datepicker1" ).datepicker({
             changeMonth: true,
-            changeYear: true
+            changeYear: true,
+            dateFormat: 'dd/mm/yy'
           });
         } );
 
@@ -141,3 +142,5 @@ function ajax_fetch(path, data, funcion_resolve){
     
        
     }
+
+

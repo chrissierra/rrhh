@@ -223,7 +223,7 @@ $st = $db1->query("SELECT * from clientes_rrhh WHERE nombre_empresa='$user'");  
 
 <?php require './model/clase_base_datos.php';
 $asistencia= new crud_variables_empresa;
-$asistencia_en_bbdd= $asistencia->get_por_query("SELECT * from asistencia where usuario_cliente='".$_SESSION["usuario"]."' AND fecha='".date("Y-m-d")."'");
+$asistencia_en_bbdd= $asistencia->get_por_query("SELECT * from asistencia where usuario_cliente='".$_SESSION["usuario"]."' AND fecha='".date("d/m/Y")."'");
 
 //echo "<h1> prueba mes".date("m") . "</h1>";
 
@@ -326,9 +326,9 @@ $dayForDate = date("M", mktime(0, 0, 0, $parts[1], $parts[2], $parts[0]));
                               </thead>
                               <tbody>
 
-                              <?php foreach ($asistencia_en_bbdd as $key => $value): ?>
+                              <?php $k=1; foreach ($asistencia_en_bbdd as $key => $value): ?>
                                 <tr>
-                                  <td>1</td>
+                                  <td><?php echo $k ?></td>
                                   <td><?php echo ucwords($value["nombre"]) . " " . ucwords($value["apellido"]); ?></td>
                                   <td><?php echo ucwords($value["tipo_movimiento"]); ?></td>
                                   <td><?php echo $value["hora"]; ?></td>
@@ -338,7 +338,7 @@ $dayForDate = date("M", mktime(0, 0, 0, $parts[1], $parts[2], $parts[0]));
                                     </div>
                                   </td>
                                 </tr>
-                                <?php endforeach; ?>
+                                <?php $k++; endforeach; ?>
                               </tbody>
                             </table>
                            

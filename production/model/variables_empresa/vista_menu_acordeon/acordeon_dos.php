@@ -19,6 +19,7 @@
                       <span class="section">Anexo de trabajo</span>
 
 <input type="hidden" id="usuario_plataforma" value="<?php  echo $_SESSION["usuario"]; ?>">
+                     
                       <div class="item form-group">
                          <!-- ANTES FOREACH ESTABA ACA -->
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nombre">Descripción breve: 

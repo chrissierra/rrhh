@@ -10,6 +10,27 @@ const ERROR= "Ejecución Con Error";
       
     }
 
+
+
+
+//@funcion que define los array a usar
+        /*
+        Debe usarse buscando una columna en la tabla, y esa columna es el cero que aparece como parámetro en fetchall.
+        */
+public function extrae_bbdd_fetchcolumn($query){
+    return $this->array= $this->make_fetch($query)->fetchAll(PDO::FETCH_COLUMN, 0);
+   
+ }// fin funcion de array a usar
+ 
+
+
+
+
+
+
+
+
+
 /*
 
 ********************************************************************************************************************
